@@ -1,1 +1,1 @@
-TODO: Your name here !
+{{ author_name }} <{{ author_email }}>

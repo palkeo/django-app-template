@@ -1,11 +1,11 @@
 {{ app_name }}
 =================
 
-.. image:: https://travis-ci.org/{{ author }}/{{ app_name }}.png
-    :target: https://travis-ci.org/{{ author }}/{{ app_name }}
+.. image:: https://travis-ci.org/{{ author_slug }}/{{ app_name }}.png
+    :target: https://travis-ci.org/{{ author_slug }}/{{ app_name }}
 
-.. image:: https://coveralls.io/repos/{{ author }}/{{ app_name }}/badge.png
-    :target: https://coveralls.io/r/{{ author }}/{{ app_name }}
+.. image:: https://coveralls.io/repos/{{ author_slug }}/{{ app_name }}/badge.png
+    :target: https://coveralls.io/r/{{ author_slug }}/{{ app_name }}
 
 
 What is it ?

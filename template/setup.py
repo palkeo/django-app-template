@@ -1,5 +1,4 @@
 from distutils.core import setup
-from pip.req import parse_requirements
 
 with open('README.rst', 'r') as f:
     long_description = f.read()
@@ -8,24 +7,27 @@ with open('VERSION', 'r') as f:
     version = f.read().strip()
 
 setup(
-    name = 'django-safedelete',
-    packages = ['django-safedelete'],
+    name = '{{ app_name }}',
+    packages = ['{{ app_name }}'],
     version = version,
-    description = 'Mask your objects instead of deleting them from your database.',
+    description = '{{ short_description }}',
     long_description = long_description,
-    author = 'Korantin Auguste',
-    author_email = 'contact@palkeo.com',
-    url = 'https://github.com/makinacorpus/django-safedelete',
-    download_url = 'https://github.com/makinacorpus/django-safedelete/tarball/%s' % version,
-    keywords = ['django', 'delete', 'safedelete', 'softdelete'],
+    author = '{{ author_name }}',
+    author_email = '{{ author_email }}',
+    url = 'https://github.com/{{ author_slug }}/{{ app_name }}',
+    download_url = 'https://github.com/{{ author_slug }}/{{ app_name }}/tarball/%s' % version,
+    keywords = ['{{ app_name }}'],
     classifiers = [
         "Framework :: Django",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python",
         "Development Status :: 4 - Beta",
+        "Operating System :: OS Independent",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     ],
-    license='BSD',
-    requires=['Django (>= 1.3)']
+    license='{{ license }}',
+    requires=['Django (>= 1.4)']
 )
