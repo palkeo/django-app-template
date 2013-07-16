@@ -1,1 +1,1 @@
-{{ author_name }} <{{ author_email }}>
+{{ author_name|default:"<AUTHOR_NAME>" }} <{{ author_email|default:"<AUTHOR_EMAIL>" }}>

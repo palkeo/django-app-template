@@ -1,26 +1,28 @@
 from distutils.core import setup
+import os.path
 
-with open('README.rst', 'r') as f:
+from django.conf import settings
+settings.configure()
+
+PKG_DIR = os.path.abspath(os.path.dirname(__file__))
+
+with open(os.path.join(PKG_DIR, 'README.rst'), 'r') as f:
     long_description = f.read()
-
-with open('VERSION', 'r') as f:
-    version = f.read().strip()
 
 setup(
     name = '{{ app_name }}',
     packages = ['{{ app_name }}'],
-    version = version,
-    description = '{{ short_description }}',
+    version = {{ app_name }}.__version__,
+    description = '{{ short_description|default:"<SHORT_DESCRIPTION>" }}',
     long_description = long_description,
-    author = '{{ author_name }}',
-    author_email = '{{ author_email }}',
-    url = 'https://github.com/{{ author_slug }}/{{ app_name }}',
-    download_url = 'https://github.com/{{ author_slug }}/{{ app_name }}/tarball/%s' % version,
+    author = '{{ author_name|default:"<AUTHOR_NAME>" }}',
+    author_email = '{{ author_email|default:"<AUTHOR_EMAIL>" }}',
+    url = 'https://github.com/{{ author_slug|default:"<AUTHOR>" }}/{{ app_name }}',
+    download_url = 'https://github.com/{{ author_slug|default:"<AUTHOR>" }}/{{ app_name }}/tarball/%s' % version,
     keywords = ['{{ app_name }}'],
     classifiers = [
         "Framework :: Django",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: BSD License",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python",
@@ -28,6 +30,6 @@ setup(
         "Operating System :: OS Independent",
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     ],
-    license='{{ license }}',
+    license='{{ license|default:"<LICENSE>" }}',
     requires=['Django (>= 1.4)']
 )
