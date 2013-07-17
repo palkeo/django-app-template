@@ -4,15 +4,19 @@ import os.path
 from django.conf import settings
 settings.configure()
 
+import {{ app_name }}
+
 PKG_DIR = os.path.abspath(os.path.dirname(__file__))
 
 with open(os.path.join(PKG_DIR, 'README.rst'), 'r') as f:
     long_description = f.read()
 
+version = {{ app_name }}.__version__
+
 setup(
     name = '{{ app_name }}',
     packages = ['{{ app_name }}'],
-    version = {{ app_name }}.__version__,
+    version = version,
     description = '{{ short_description|default:"<SHORT_DESCRIPTION>" }}',
     long_description = long_description,
     author = '{{ author_name|default:"<AUTHOR_NAME>" }}',

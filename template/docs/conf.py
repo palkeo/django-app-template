@@ -43,7 +43,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = '{{ app_name }}'
-copyright = '2013, {{ author_name|default:"<AUTHOR_NAME">" }}'
+copyright = '2013, {{ author_name|default:"<AUTHOR_NAME>" }}'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

@@ -15,7 +15,7 @@ To start a new app with this template::
     # Clone the repo
     git clone git://github.com/palkeo/django-app-template.git
     # Use the template
-    django-admin.py startapp --template=django-app-template/template --extension=py,rst <app_name>
+    django-admin.py startapp --template=django-app-template/template --extension=py,rst,in,cfg <app_name>
 
 
 What Does This Give You

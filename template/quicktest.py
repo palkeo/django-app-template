@@ -3,6 +3,7 @@ import sys
 import argparse
 from django.conf import settings
 
+
 class QuickDjangoTest(object):
     """
     A quick way to run the Django test suite without a fully-configured project.
